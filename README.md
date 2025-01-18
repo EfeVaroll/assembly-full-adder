@@ -92,6 +92,6 @@ This project implements a **4-bit Full Adder** using the **ATmega16 microcontrol
 ![Flowchart](images/flowchart.jpg)
 
 ### Pinout Diagram
-![Pinout](images/pinout.jpg)
+![Pinout](images/pinout.png)
 
 ---
