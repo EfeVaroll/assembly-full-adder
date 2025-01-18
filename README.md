@@ -1,6 +1,6 @@
 # 4-Bit Full Adder Using ATmega16
 
-![Project Overview](images/circuit_diagram.png)
+![Project Overview](images/adder_logic_gates.png)
 
 This project implements a **4-bit Full Adder** using the **ATmega16 microcontroller**. It computes the sum and carry-out for two 4-bit binary inputs along with a carry-in signal. The results are displayed using LEDs connected to the microcontroller.
 
@@ -91,28 +91,7 @@ This project implements a **4-bit Full Adder** using the **ATmega16 microcontrol
 ### Flowchart
 ![Flowchart](images/flowchart.jpg)
 
+### Pinout Diagram
+![Pinout](images/pinout.jpg)
+
 ---
-
-## 📂 Code Overview
-
-The project uses an assembly file, `4bit_full_adder.asm`. Below is a snippet of the main logic:
-
-```assembly
-RESET:
-    ; Initialize ports
-    LDI TEMP, 0x00
-    OUT PORTA, TEMP
-    OUT PORTB, TEMP
-    OUT DDRC, 0xFF
-
-LOOP:
-    ; Read inputs and calculate sum
-    IN A, PINA
-    IN B, PINB
-    SBRC TEMP, 5
-    LDI CIN, 0x01
-    MOV TEMP, A
-    ADD TEMP, B
-    ADD TEMP, CIN
-    OUT PORTC, TEMP
-    RJMP LOOP
