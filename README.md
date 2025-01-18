@@ -31,7 +31,7 @@ This project implements a **4-bit Full Adder** using the **ATmega16 microcontrol
 ## 🛠️ Requirements
 
 ### Hardware:
-- **ATmega16 Microcontroller**
+- **ATmega16 Microcontroller** //1MHz internal clock used here
 - LEDs (5) with 330 Ω resistors
 - Push buttons (for binary inputs)
 - Breadboard and jumper wires
