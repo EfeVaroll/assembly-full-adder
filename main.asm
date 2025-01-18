@@ -1,0 +1,61 @@
+;
+; 4bit_full_adder.asm
+;
+; Created: 8.01.2025 22:40:10
+; Author : efevarol
+;
+
+.INCLUDE "M16DEF.INC"
+
+.DEF TEMP = R16
+.DEF A = R17
+.DEF B = R18
+.DEF CIN = R21
+.DEF SUM = R19
+.DEF CARRY = R20
+
+.ORG 0X0000
+    RJMP RESET
+
+RESET:
+    LDI TEMP, 0X00
+    OUT PORTA, TEMP
+    OUT DDRA, TEMP
+
+    OUT PORTB, TEMP
+    OUT DDRB, TEMP
+
+    LDI TEMP, 0XFF
+    OUT DDRC, TEMP
+
+    LDI A, 0X00
+    LDI B, 0X00
+    LDI CIN, 0X00
+
+LOOP:
+    IN A, PINA
+    IN B, PINB
+    IN TEMP, PINB
+    SBRC TEMP, 5
+    LDI CIN, 0X01
+    SBRS TEMP, 5
+    LDI CIN, 0X00
+
+    MOV TEMP, A
+    ADD TEMP, B
+    ADD TEMP, CIN
+    MOV SUM, TEMP
+
+    LDI TEMP, 0X10
+    AND TEMP, SUM
+    BRNE SETCARRY
+    LDI CARRY, 0X00
+    RJMP DISPLAYSUM
+
+SETCARRY:
+    LDI CARRY, 0X10
+
+DISPLAYSUM:
+    OUT PORTC, SUM
+
+    RJMP LOOP
