@@ -86,6 +86,7 @@ This project implements a **4-bit Full Adder** using the **ATmega16 microcontrol
 ## 📊 Project Diagrams
 
 ### Circuit Diagram
+   - Example: A = 6 , B = 4, Cin = 1 (in decimal) || Sum = 11, Cout = 0 (in decimal)
 ![Circuit Diagram](images/circuit_diagram.png)
 
 ### Flowchart
