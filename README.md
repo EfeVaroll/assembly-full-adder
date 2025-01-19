@@ -40,7 +40,6 @@ This project implements a **4-bit Full Adder** using the **ATmega16 microcontrol
 ### Software:
 - [AVR Studio](https://www.microchip.com/mplab/avr-support/atmel-studio-7) (for compiling the code)
 - [Proteus](https://www.labcenter.com/) (for circuit simulation)
-- [AVRDUDE](http://savannah.nongnu.org/projects/avrdude/) (for programming the microcontroller)
 
 ---
 
@@ -101,5 +100,5 @@ This project implements a **4-bit Full Adder** using the **ATmega16 microcontrol
 ## 🔗 References
 - [ATmega16 Datasheet](https://ww1.microchip.com/downloads/en/DeviceDoc/doc2466.pdf)
 - [AVR Assembly Language Tutorial](https://www.avr-asm-tutorial.net/avr_en/)
-- [Proteus Circuit Simulation Tool](https://www.labcenter.com/)
+- [Proteus Circuit Simulation Tool](https://www.labcenter.com/) //version 8.10 used in this project.
 
